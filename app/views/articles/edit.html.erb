@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="col-6 card">
+    <h1>Edit Article</h1>
+    <%= form_with model: @article do |f| %>
+      <p><%= f.label :title %></p>
+      <p><%= f.text_field :title %></p>
+      <p><%= f.label :content %></p>
+      <p><%= f.text_field :content %></p>
+      <p><%= f.submit %></p>
+    <% end %>
+    <%= link_to "Go back", article_path(@article) %>
+  </div>
+</div>

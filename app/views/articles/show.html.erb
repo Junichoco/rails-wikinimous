@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="col-6 card">
+    <h2><%= @article.title %></h2>
+    <p><%= @article.content %></p>
+    <div class="button-container">
+      <%= link_to "Go back", articles_path, class: "btn btn-light" %>
+      <%= link_to edit_article_path(@article), class: "btn btn-light" do%>
+      <i class="fa-solid fa-pencil"></i>
+      <% end %>
+      <%= link_to "Delete",
+        article_path(@article),
+        class: "btn btn-light",
+        data: {turbo_method: :delete, turbo_confirm: "Delete this article?"}
+      %>
+    </div>
+  </div>
+</div>
